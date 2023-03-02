@@ -10,7 +10,7 @@ import json
 import datetime
 import random
 
-#import sklearn
+# import sklearn
 import sklearn
 from sklearn import *
 
@@ -20,7 +20,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-sns.set_style('darkgrid', {'axes.facecolor': '0.9'})
+sns.set_style('darkgrid', {'axes.face color': '0.9'})
 
 # import graphviz
 import xgboost
@@ -29,6 +29,7 @@ import xgboost
 import imblearn
 
 import warnings
+
 warnings.filterwarnings('ignore')
 
 
@@ -53,10 +54,11 @@ def read_from_files(DIR_INPUT, BEGIN_DATE, END_DATE):
     return df_final
 
 
-#Save oject as pickle file
+# Save oject as pickle file
 def save_object(obj, filename):
     with open(filename, 'wb') as output:
         pickle.dump(obj, output, pickle.HIGHEST_PROTOCOL)
+
 
 # 1.3. Data preprocessing¶
 # 1.3.1. scaleData¶
@@ -68,6 +70,7 @@ def scaleData(train, test, features):
     test[features] = scaler.transform(test[features])
 
     return (train, test)
+
 
 # 1.4. Train/Test splitting strategies¶
 # 1.4.1. get_train_test_set¶
@@ -946,6 +949,3 @@ def plot_decision_boundary(classifier_0,
     fig_decision_boundary.colorbar(sm, cax=cax, alpha=0.3, boundaries=np.linspace(0, 1, 11))
 
     return fig_decision_boundary
-
-
-
