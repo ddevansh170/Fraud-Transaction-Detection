@@ -22,7 +22,7 @@ import seaborn as sns
 
 sns.set_style('darkgrid', {'axes.face color': '0.9'})
 
-# import graphviz
+import graphviz
 import xgboost
 
 # For imbalanced learning
